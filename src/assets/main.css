@@ -1,3 +1,4 @@
+/* fonts */
 h1,
 h2,
 h3,
@@ -15,3 +16,37 @@ h1 {
 p {
   font-size: 1rem;
 }
+/* /end fonts */
+
+/* accordion */
+.accordion {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.accordion__heading,
+.accordion__body {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.accordion__heading {
+  display: block;
+  background-color: #555;
+  cursor: pointer;
+  border: none;
+}
+
+.accordion__body {
+  background-color: #777;
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out; /* do I need to use VUE's transition element for this??*/
+}
+
+.accordion__body--displayed-yes {
+  display: block;
+  max-height: 100%;
+}
+/* /end accordion */
