@@ -39,14 +39,23 @@ p {
 
 .accordion__body {
   background-color: #777;
-  display: none;
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out; /* do I need to use VUE's transition element for this??*/
 }
 
-.accordion__body--displayed-yes {
-  display: block;
-  max-height: 100%;
+.accordion-body-slide-enter-active,
+.accordion-body-slide-leave-active {
+  max-height: 100px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: 0.25s ease-in-out;
 }
+
+.accordion-body-slide-enter-from,
+.accordion-body-slide-leave-to {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
 /* /end accordion */

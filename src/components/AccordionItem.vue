@@ -21,12 +21,9 @@ export default {
   <div class="accordion__heading" @click="toggleBodyDisplay">
     <h2>{{ headingMessage }}</h2>
   </div>
-  <div
-    class="accordion__body"
-    :class="{
-      'accordion__body--displayed-yes': bodyDisplayed,
-    }"
-  >
-    <p>{{ bodyMessage }}</p>
-  </div>
+  <Transition name="accordion-body-slide">
+    <div v-show="bodyDisplayed" class="accordion__body">
+      <p>{{ bodyMessage }}</p>
+    </div>
+  </Transition>
 </template>
