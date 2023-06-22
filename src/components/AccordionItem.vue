@@ -1,9 +1,8 @@
 <script>
 export default {
+  props: ["headingMessage", "bodyMessage"],
   data() {
     return {
-      headingMessage: "Click this to see something cool",
-      bodyMessage: "Something cool",
       bodyDisplayed: false,
     };
   },
