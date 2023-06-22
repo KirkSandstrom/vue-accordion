@@ -6,15 +6,12 @@ export default {
     AccordionItem,
   },
   data() {
-    return {
-      message: "Hello world!",
-    };
+    return {};
   },
 };
 </script>
 
 <template>
-  <h1>{{ message }}</h1>
   <div class="accordion">
     <AccordionItem></AccordionItem>
   </div>
